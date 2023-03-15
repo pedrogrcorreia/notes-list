@@ -1,5 +1,5 @@
-# NodeJS Notes
-Note taking app built in NodeJS following [this course](https://www.udemy.com/course/the-complete-nodejs-developer-course-2).
+# Notes List
+Note taking app built using NodeJS, following [this course](https://www.udemy.com/course/the-complete-nodejs-developer-course-2).
 
 ## Overview
 
