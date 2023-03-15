@@ -22,8 +22,21 @@ const addNote = function(title, body){
     } else {
         console.log(chalk.red('Note title taken!'))
     }
+}
 
+const removeNote = function(title){
+    const notes = loadNotes()
 
+    const removedNote = notes.filter(function(note){
+        return note.title !== title
+    })
+
+    if(removedNote.length < notes.length){
+        saveNotes(removedNote)
+        console.log(chalk.green('Note "' + title + '" removed!'))
+    } else {
+        console.log(chalk.red('Note "' + title + '" not found!'))
+    }
 }
 
 const saveNotes = function(notes){
@@ -43,5 +56,6 @@ const loadNotes = function(){
 
 module.exports = {
     getNotes: getNotes,
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }
